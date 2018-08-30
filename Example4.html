@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/Example4.js"></script>
+    <title></title>
+</head>
+<body>
+    <div ng-app="myApp">
+        <div ng-controller="myController">
+            First Name:<input ng-model="firstName" />
+            Last Name:<input ng-model="lastName" />
+            <input type="button" value="Get Full Name" ng-click="getFullName()" />
+            Full Name : {{fullName}}
+        </div>
+    </div>
+</body>
+</html>

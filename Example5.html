@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/Example5.js"></script>
+    <title></title>
+</head>
+<body>
+    <div ng-app="myApp">
+        <div ng-controller="myController">
+            Show Gender : <input type="checkbox" ng-model="chkGender" /><br />
+            Show Gender?? : {{chkGender}}
+            <div ng-show="chkGender">
+                <br /><br />
+                Male<input type="radio" name="gender" value="Male" ng-model="gender" />
+                Female<input type="radio" name="gender" value="Female" ng-model="gender" /><br />
+                <span>You have selected : {{gender}}</span>
+            </div>
+
+            <div ng-if="chkGender">
+                <br /><br />
+                Male<input type="radio" name="gender1" value="Male" ng-model="gender" />
+                Female<input type="radio" name="gender1" value="Female" ng-model="gender" /><br />
+                <span>You have selected : {{gender}}</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

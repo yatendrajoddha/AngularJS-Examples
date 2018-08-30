@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/Example6.js"></script>
+    <title></title>
+</head>
+<body>
+    <div ng-app="myApp">
+        <div ng-controller="myController">
+            <select ng-model="SelectedCity" ng-options="city.name for city in Cities"></select><br />
+            You have selected city : {{SelectedCity}}
+            <br /><br /><br /><br />
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="city in Cities | orderBy : 'name' | filter: 'g'">
+                        <td>{{city.id}}</td>
+                        <td>{{city.name}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
